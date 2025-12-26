@@ -1,0 +1,5 @@
+{
+  "name": "ZenDone AI To-Do",
+  "description": "A sophisticated, high-performance To-Do application featuring local state management, elegant UI transitions, and Gemini-powered task encouragement.",
+  "requestFramePermissions": []
+}
