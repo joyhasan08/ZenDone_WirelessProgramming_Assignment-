@@ -71,3 +71,8 @@ Open [http://localhost:5173](http://localhost:5173) to view the app in your brow
 - `services/aiService.ts`: Logic for interfacing with the Gemini API.
 - `types.ts`: Global TypeScript interfaces and enums.
 - `index.html`: Main HTML entry point with CDN imports.
+
+## 📂 Author
+
+- Zarjij Hasan
+- ID: 173-15-10448
