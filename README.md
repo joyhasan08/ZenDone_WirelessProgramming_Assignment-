@@ -50,17 +50,9 @@ npm i
 
 _Note: You may also need to install dev dependencies like `typescript`, `@types/react`, and `tailwindcss` if setting up from scratch._
 
-### 3. Environment Configuration
-
-Create a `.env` file in your root directory and add your Google Gemini API Key:
-
-```env
-API_KEY=your_google_gemini_api_key_here
-```
-
 You can obtain an API key from the [Google AI Studio](https://aistudio.google.com/).
 
-### 4. Running the App
+### 5. Running the App
 
 For a standard Vite/React setup:
 
@@ -79,7 +71,3 @@ Open [http://localhost:5173](http://localhost:5173) to view the app in your brow
 - `services/aiService.ts`: Logic for interfacing with the Gemini API.
 - `types.ts`: Global TypeScript interfaces and enums.
 - `index.html`: Main HTML entry point with CDN imports.
-
-## 🛡 License
-
-This project is open-source and available under the MIT License.
