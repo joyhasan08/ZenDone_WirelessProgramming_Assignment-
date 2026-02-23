@@ -1,0 +1,32 @@
+{
+  "name": "ZenDone - AI Task Manager",
+  "short_name": "ZenDone",
+  "description": "Intelligent task manager with AI-powered motivation",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#4f46e5",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "utilities"],
+  "shortcuts": [
+    {
+      "name": "Add New Task",
+      "url": "/?action=add",
+      "description": "Quickly add a new task"
+    }
+  ]
+}

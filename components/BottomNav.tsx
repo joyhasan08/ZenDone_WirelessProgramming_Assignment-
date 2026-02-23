@@ -4,9 +4,10 @@ import React from 'react';
 interface BottomNavProps {
   currentFilter: 'all' | 'pending' | 'done';
   setFilter: (filter: 'all' | 'pending' | 'done') => void;
+  darkMode: boolean;
 }
 
-export const BottomNav: React.FC<BottomNavProps> = ({ currentFilter, setFilter }) => {
+export const BottomNav: React.FC<BottomNavProps> = ({ currentFilter, setFilter, darkMode }) => {
   const tabs = [
     {
       id: 'all' as const,
@@ -39,7 +40,9 @@ export const BottomNav: React.FC<BottomNavProps> = ({ currentFilter, setFilter }
 
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-50 px-6 pb-6 pt-2 pointer-events-none">
-      <div className="max-w-md mx-auto bg-white/80 backdrop-blur-lg border border-slate-200 shadow-2xl rounded-3xl flex items-center justify-around p-2 pointer-events-auto">
+      <div className={`max-w-md mx-auto backdrop-blur-lg shadow-2xl rounded-3xl flex items-center justify-around p-2 pointer-events-auto transition-colors duration-300 ${
+        darkMode ? 'bg-slate-800/90 border border-slate-700' : 'bg-white/80 border border-slate-200'
+      }`}>
         {tabs.map((tab) => {
           const isActive = currentFilter === tab.id;
           return (
@@ -47,10 +50,12 @@ export const BottomNav: React.FC<BottomNavProps> = ({ currentFilter, setFilter }
               key={tab.id}
               onClick={() => setFilter(tab.id)}
               className={`flex flex-col items-center justify-center flex-1 py-2 transition-all duration-300 relative ${
-                isActive ? 'text-indigo-600' : 'text-slate-400 hover:text-slate-600'
+                isActive 
+                  ? 'text-indigo-600' 
+                  : darkMode ? 'text-slate-500 hover:text-slate-300' : 'text-slate-400 hover:text-slate-600'
               }`}
             >
-              <div className={`p-1 rounded-xl transition-all duration-300 ${isActive ? 'bg-indigo-50' : 'bg-transparent'}`}>
+              <div className={`p-1 rounded-xl transition-all duration-300 ${isActive ? (darkMode ? 'bg-indigo-900/50' : 'bg-indigo-50') : 'bg-transparent'}`}>
                 {tab.icon}
               </div>
               <span className="text-[10px] font-bold uppercase mt-1 tracking-wider">{tab.label}</span>
